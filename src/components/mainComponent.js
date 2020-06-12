@@ -7,6 +7,11 @@ class Main extends Component {
         this.state = {
           logos: [
             {
+              id: 4,
+              name: 'HTML/CSS/Javascript',
+              image: 'assets/images/images/html.jpg'
+            },
+            {
                 id: 0,
                 name: 'Bootstrap',
                 image: 'assets/images/images/bootstrap-logo.png',
@@ -25,7 +30,8 @@ class Main extends Component {
                 id: 3,
                 name: 'NodeJs',
                 image: 'assets/images/images/node-logo.png',
-            }
+            },
+            
         ],
         }
       };
@@ -33,9 +39,10 @@ class Main extends Component {
       render() {
         const directory = this.state.logos.map(logo => {
         return (
-          <div>
+          <div className="container">
+            <div className="row">
             <img className="w-50" src={logo.image} />
-            
+              </div>
           </div>
         );
       });
